@@ -1,6 +1,7 @@
 <template>
-  <header>
+  <header class="container-header">
       <Logo></Logo>
+      <LogoRock></LogoRock>
   </header>
 </template>
 

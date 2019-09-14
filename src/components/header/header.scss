@@ -1,7 +1,7 @@
 @import '../variables.scss';
 @import '../mixins.scss';
 
-header {
+.container-header {
     @include flex-center-wrap();
     width: calc(#{$size-pec-12} - #{$size-em-4});
     padding: $size-em-2;
@@ -11,5 +11,26 @@ header {
         width: $size-pec-6;
         height: 45px;
         background-size: cover;
+    }
+
+    .icon-rock-hand {
+        width: $size-pec-2;
+        height: 45px;
+        background-size: contain;
+    }
+}
+
+@media all and (min-width: 992px)  {
+    .container-header {
+        justify-content: space-between;
+
+        .icon-pmweb {
+            width: $size-pec-2;
+            background-size: contain;
+        }
+
+        .icon-rock-hand {
+            width: $size-pec-1;
+        }
     }
 }
