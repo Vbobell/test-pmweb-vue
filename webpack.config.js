@@ -1,13 +1,14 @@
-'use strict'
-
+const path = require('path');
 const { VueLoaderPlugin } = require('vue-loader');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const ASSET_PATH = process.env.ASSET_PATH || '/';
 
 module.exports = {
     mode: 'development',
-    entry: [
-        './src/app.js'
-    ],
+    entry: path.join(__dirname, './index.js'),
+    output: {
+        publicPath: ASSET_PATH
+    },
     devServer: {
         historyApiFallback: true,
         port: 3000,
@@ -17,12 +18,32 @@ module.exports = {
         }
     },
     module: {
-        rules: [
-            {
-                test: /\.vue$/,
-                use: 'vue-loader'
-            }
-        ]
+        rules: [{
+            test: /\.vue$/,
+            use: 'vue-loader'
+        }, {
+            test: /\.js$/,
+            use: 'babel-loader'
+        }, {
+            test: /\.(scss|css)$/,
+            use: [
+                'vue-style-loader',
+                'css-loader',
+                'sass-loader'
+            ]
+        }, {
+            test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,
+            issuer: {
+                test: /\.(js|jsx)$/
+            },
+            use: ['@svgr/webpack']
+        }, {
+            test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,
+            issuer: {
+                test: /\.(scss|css)$/
+            },
+            loader: 'url-loader'
+        }]
     },
     plugins: [
         new VueLoaderPlugin(),

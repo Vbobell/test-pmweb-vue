@@ -1,0 +1,13 @@
+.icon-default {
+    border: none;
+	margin: 0;
+    padding: 0;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: center;
+    -webkit-appearance: none;
+
+    &.icon-pmweb {
+        background-image: url('../assets/svg/Logo.svg');
+    }
+}

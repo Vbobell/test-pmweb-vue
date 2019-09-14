@@ -1,0 +1,15 @@
+@import '../variables.scss';
+@import '../mixins.scss';
+
+header {
+    @include flex-center-wrap();
+    width: calc(#{$size-pec-12} - #{$size-em-4});
+    padding: $size-em-2;
+    background-color: $header-bg-color;
+
+    .icon-pmweb {
+        width: $size-pec-6;
+        height: 45px;
+        background-size: cover;
+    }
+}
