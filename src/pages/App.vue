@@ -1,6 +1,9 @@
 
 <template>
-    <my-header></my-header>
+    <main>
+        <Header></Header>
+        <Graphic></Graphic>
+    </main>
 </template>
 
 <script src="./app.js"></script>

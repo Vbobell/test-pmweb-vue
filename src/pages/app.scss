@@ -1,7 +1,15 @@
 @import '../components/variables.scss';
-@import '../components/mixins.scss';
+@import '../components/fonts.scss';
 @import '../components/icons.scss';
+@import '../components/mixins.scss';
+
 
 body {
-    display: grid;
+    * {
+        @include font-primary-light;
+    }
+    
+    main {
+        display: grid;
+    }
 }

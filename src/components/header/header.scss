@@ -23,14 +23,17 @@
 @media all and (min-width: 992px)  {
     .container-header {
         justify-content: space-between;
+        width: calc(#{$size-pec-12} - #{$size-em-8});
+        padding: $size-em-2 $size-em-4;
 
         .icon-pmweb {
             width: $size-pec-2;
             background-size: contain;
+            background-position-x: left;
         }
 
         .icon-rock-hand {
-            width: $size-pec-1;
+            width: 45px;
         }
     }
 }

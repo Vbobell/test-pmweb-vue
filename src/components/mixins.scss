@@ -6,3 +6,11 @@
     align-items: center;
     flex-wrap: wrap;
 }
+
+@mixin font-primary-light {
+    font-family: 'Gotham-Light';
+}
+
+@mixin font-primary-book {
+    font-family: 'Gotham-Book';
+}

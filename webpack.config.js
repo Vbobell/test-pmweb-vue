@@ -38,7 +38,7 @@ module.exports = {
             },
             use: ['@svgr/webpack']
         }, {
-            test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,
+            test: /\.(png|woff|woff2|eot|ttf|svg)(\?v=\d+\.\d+\.\d+)?$/,
             issuer: {
                 test: /\.(scss|css)$/
             },
