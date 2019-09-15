@@ -14,6 +14,91 @@ body {
             width: calc(#{$size-pec-12} - #{$size-em-4});
             padding: $size-em-2;
         }
+
+        .content-title {
+            width: $size-pec-12;
+            margin: 0 0 $size-em-2 0;
+            @include font-primary-light();
+            font-weight: bold;
+            font-size: $size-em-3;
+        }
+
+        table {
+            width: 100%;
+            
+            thead {
+                tr {
+                    margin: 0 0 $size-em-2 0;
+                    th {
+                        @include font-primary-book();
+                        text-align: left;
+                        font-size: $size-em-2;
+                        font-weight: bold;
+                        padding: $size-em-1 $size-em-1 $size-em-2 $size-em-1;
+                    }
+                }
+            }
+
+            tbody {
+                tr {
+                    &:not(:last-child) {
+                        border-bottom: 1px solid $border-color;
+                    }
+
+                    td {
+                        padding: $size-em-2 $size-em-1;
+                    }
+                }
+            }
+        }
+
+        
+        .content-item-pagination {
+            @include flex-center-wrap();
+            width: calc(#{$size-pec-12} - #{$size-em-4});
+            padding: $size-em-2;
+            @include font-primary-book();
+            font-size: $size-em-2;
+            font-weight: bold;
+
+            .page-item {
+                &.active {
+                    a {
+                        min-width: 10px;
+                        padding: 6px 10px !important;
+                        border-radius: 100%;
+                        background-color: $active-page-color;
+                        color: white;
+                    }
+                }
+
+                &.previous {
+                    a {
+                        margin: 0 10px 0 0;
+                    }
+                }
+
+                &.next {
+                    a {
+                        margin: 0 0 0 10px;
+                    }
+                }
+
+                &.previous, &.next {
+                    a {
+                        background-color: $change-page-color;
+                    }
+                }
+
+                &.first, &.last {
+                    display: none;
+                }
+            }
+        }
+        .content-item-table {
+            max-width: 100%;
+            overflow-x: auto;
+        }
     }
 }
 

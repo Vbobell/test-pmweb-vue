@@ -4,6 +4,7 @@
         <Header></Header>
         <Overview></Overview>
         <Graphic></Graphic>
+        <Musics></Musics>
     </main>
 </template>
 

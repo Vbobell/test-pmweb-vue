@@ -1,0 +1,31 @@
+@import '../variables.scss';
+@import '../mixins.scss';
+
+body {
+    main {
+        .container-section {
+            &.container-musics {
+                padding: 0 $size-em-2 $size-em-2 $size-em-2;
+
+                .content-musics {
+                    width: calc(#{$size-pec-12} - #{$size-em-4});
+                    padding: $size-em-2;
+                    box-shadow: 1px 1px 5px 2px $box-shadow-color;
+                    border-radius: 5px;
+                }
+            }
+        }
+    }
+}
+
+@media all and (min-width: 992px)  {
+    body {
+        main {
+            .container-section {
+                &.container-musics {
+                    padding: 0 $size-em-4 $size-em-4 $size-em-4;
+                }
+            }
+        }
+    }
+}
