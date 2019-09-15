@@ -1,0 +1,109 @@
+@import '../variables.scss';
+@import '../mixins.scss';
+
+.container-overview {
+    @include flex-center-wrap();
+
+    .content-item {
+        width: calc(#{$size-pec-12} - #{$size-em-2});
+        padding: $size-em-1;
+        box-shadow: 1px 1px 5px 2px $box-shadow-color;
+        border-radius: 5px;
+
+        &:not(:last-child) {
+            margin: 0 0 1em 0;
+        }
+
+        .item {
+            @include flex-start();
+            font-size: $size-em-2;
+
+            &.item-info {
+                flex-wrap: wrap;
+
+                strong {
+                    width: $size-pec-12;
+                    margin: 10px 0;
+                    color: #666666;
+                    text-align: center;
+                    @include font-primary-book();
+                    font-weight: bold;
+                    font-size: $size-em-4;
+                }
+            }
+
+            &.item-info-perc {
+                justify-content: center;
+                width: $size-pec-3;
+                padding: $size-em-1;
+                margin: 0 auto;
+                text-align: center;
+                border-radius: 15px;
+                color: white;
+
+                &::before {
+                    content: "";
+                }
+
+                strong {
+                    @include font-primary-book();
+                    font-weight: bold;
+                }
+            }
+
+            .icon-default {
+                width: 40px;
+                height: 40px;
+                margin: 0 10px 0 0;
+            }
+        }
+
+        &.content-success {
+            .item-info-perc {
+                background-color: $success-bg-color;
+
+                &::before {
+                    @include arrow-top(5px, white);
+                    margin: 0 5px 5px -5px;
+                }
+            }
+        }
+
+        &.content-danger {
+            .item-info-perc {
+                background-color: $danger-bg-color;
+
+                &::before {
+                    @include arrow-bottom(5px, white);
+                    margin: 5px 5px 0 -5px;
+                }
+            }
+        }
+    }
+}
+
+@media all and (min-width: 992px)  {
+    .container-overview {
+        flex-wrap: nowrap;
+
+        .content-item {
+            width: calc(#{$size-pec-4} - #{$size-em-8});
+            padding: $size-em-4;
+
+            &:not(:last-child) {
+                margin: 0;
+            }
+
+            &:nth-child(2n+2) {
+                margin: 0 $size-em-2;
+            }
+
+            .item {
+                .icon-default {
+                    width: 30px;
+                    height: 30px;
+                }
+            }
+        }
+    }
+}

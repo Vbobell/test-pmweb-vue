@@ -7,10 +7,32 @@
     flex-wrap: wrap;
 }
 
+@mixin flex-start() {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
 @mixin font-primary-light {
     font-family: 'Gotham-Light';
 }
 
 @mixin font-primary-book {
     font-family: 'Gotham-Book';
+}
+
+@mixin arrow-top($size, $color) {
+    border: $size solid;
+    border-top-color: transparent;
+    border-left-color: transparent;
+    border-bottom-color: $color;
+    border-right-color: transparent;
+}
+
+@mixin arrow-bottom($size, $color) {
+    border: $size solid;
+    border-top-color: $color;
+    border-left-color: transparent;
+    border-bottom-color: transparent;
+    border-right-color: transparent;
 }

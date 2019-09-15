@@ -2,6 +2,7 @@
 <template>
     <main>
         <Header></Header>
+        <Overview></Overview>
         <Graphic></Graphic>
     </main>
 </template>

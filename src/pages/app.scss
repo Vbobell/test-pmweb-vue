@@ -10,6 +10,24 @@ body {
     }
     
     main {
-        display: grid;
+        .container-section {
+            width: calc(#{$size-pec-12} - #{$size-em-4});
+            padding: $size-em-2;
+        }
+    }
+}
+
+@media all and (min-width: 992px)  {
+    body {
+        main {
+            .container-section {
+                width: calc(#{$size-pec-12} - #{$size-em-8});
+                padding: $size-em-4;
+
+                &.container-overview {
+                    padding: $size-em-4 $size-em-4 0 $size-em-4;
+                }
+            }
+        }
     }
 }

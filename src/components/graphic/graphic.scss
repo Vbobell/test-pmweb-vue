@@ -2,17 +2,16 @@
 @import '../mixins.scss';
 
 .container-graphic {
-    width: calc(#{$size-pec-12} - #{$size-em-4});
-    padding: $size-em-2;
-
     .chart {
         width: calc(#{$size-pec-12} - #{$size-em-4});
         padding: $size-em-2;
-        box-shadow: 0px 0px 5px 1px $box-shadow-color;
+        box-shadow: 1px 1px 5px 2px $box-shadow-color;
         border-radius: 5px;
 
         .highcharts-title {
             width: $size-pec-12 !important;
+            top: 0 !important;
+            left: 0 !important;
             text-align: center;
         }
     }
@@ -20,10 +19,9 @@
 
 @media all and (min-width: 992px)  {
     .container-graphic {
-        width: calc(#{$size-pec-12} - #{$size-em-8});
-        padding: $size-em-4;
-
         .chart {
+            width: calc(#{$size-pec-12} - #{$size-em-8});
+            padding: $size-em-4;
             .highcharts-title {
                 width: auto !important;
             }

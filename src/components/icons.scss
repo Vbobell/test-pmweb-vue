@@ -8,10 +8,18 @@
     -webkit-appearance: none;
 
     &.icon-pmweb {
-        background-image: url('../assets/svg/Logo.svg');
+        background-image: url('../assets/svg/logo.svg');
     }
 
     &.icon-rock-hand {
-        background-image: url('../assets/svg/RockingHand.svg');
+        background-image: url('../assets/svg/rocking-hand.svg');
+    }
+
+    &.icon-music {
+        background-image: url('../assets/svg/music.svg');
+    }
+
+    &.icon-tomb {
+        background-image: url('../assets/svg/tomb.svg');
     }
 }

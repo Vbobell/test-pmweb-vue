@@ -1,5 +1,5 @@
 <template>
-  <section class="container-graphic">
+  <section class="container-section container-graphic">
       <highcharts class="chart" :options="chartOptions"></highcharts>
   </section>
 </template>
