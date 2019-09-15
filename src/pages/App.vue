@@ -5,6 +5,7 @@
         <Overview></Overview>
         <Graphic></Graphic>
         <Musics></Musics>
+        <Footer></Footer>
     </main>
 </template>
 
